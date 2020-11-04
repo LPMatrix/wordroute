@@ -1,0 +1,22 @@
+{
+  "name": "wordroute",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schoolite/wordroute.git"
+  },
+  "author": "schoolite",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/schoolite/wordroute/issues"
+  },
+  "homepage": "https://github.com/schoolite/wordroute#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

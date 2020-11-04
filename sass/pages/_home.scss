@@ -1,0 +1,22 @@
+.container{
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+
+    &__input{
+       width: 60%;     
+    }
+
+    &__result{
+        width: 40%;
+    }
+}
+
+
+.logo__box{
+    display: flex;
+    align-items: center;
+
+    &-text{
+        margin-left: .4rem;
+    }
+}
