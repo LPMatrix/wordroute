@@ -40,8 +40,7 @@
   .container__input {
     width: 60%;
     position: relative;
-    left: 120px;
-    top: 67px; }
+    padding: 6rem; }
   .container__result {
     width: 40%;
     background: #1890FF; }
@@ -53,19 +52,26 @@
     margin-left: .4rem; }
 
 .container__result {
-  display: flex;
-  justify-content: center;
   flex-direction: column;
   color: #ffffff; }
   .container__result-header {
     font-size: 20px;
     line-height: 24px;
-    margin-left: 90px; }
+    margin: 150px 0 30px 90px; }
   .container__result-box {
     display: flex;
     flex-direction: column;
     align-items: center; }
     .container__result-box-value {
-      border: 1px solid black;
-      background: red;
-      width: 350px; }
+      display: flex;
+      align-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.2);
+      width: 350px;
+      height: 40px;
+      padding-left: 10px;
+      margin: 5px; }
+
+.radio-box {
+  margin-right: 5px;
+  background: rgba(255, 255, 255, 0.2); }

@@ -8,18 +8,15 @@
 
 .container{
     font-family: 'Poppins', sans-serif;
-    // display: grid;
-    // grid-template-columns: 60% 40%;
     display: flex;
     
-    // justify-items: center;
+    
     height: 100vh;
 
     &__input{
         width: 60%;
         position: relative;
-        left: 120px;
-        top: 67px;
+        padding: 6rem;
     }
 
     &__result{
@@ -39,15 +36,16 @@
 }
 
 .container__result{
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // justify-content: center;
+    
     flex-direction: column;
     color: $color-text;
 
     &-header{
         font-size: 20px;
         line-height: 24px;
-        margin-left: 90px;
+        margin: 150px 0 30px 90px;
     }
 
     &-box{
@@ -57,9 +55,19 @@
 
 
         &-value{
-           border: 1px solid black;
-           background: red;
+            display: flex;
+            align-items: center;
+           border: 1px solid $color-tertiary;
+           background: $color-tertiary;
            width: 350px;
+           height: 40px;
+           padding-left: 10px;
+           margin: 5px;
         }
     }
+}
+
+.radio-box{
+    margin-right: 5px;
+    background: $color-tertiary;
 }
