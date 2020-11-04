@@ -1,0 +1,23 @@
+.form__box{
+    position: absolute;
+    // left: 120px;
+    top: 175px;
+
+    &-container{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3rem;
+    }
+
+    &-label{
+        margin-bottom: .5rem;
+    }
+
+    &-input{
+        width: 400px;
+        height: 40px;
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.1);
+    }
+}

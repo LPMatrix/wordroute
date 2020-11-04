@@ -1,13 +1,30 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .container{
     font-family: 'Poppins', sans-serif;
+    // display: grid;
+    // grid-template-columns: 60% 40%;
+    display: flex;
+    
+    // justify-items: center;
     height: 100vh;
 
     &__input{
-       width: 60%;     
+        width: 60%;
+        position: relative;
+        left: 120px;
+        top: 67px;
     }
 
     &__result{
         width: 40%;
+        background: $color-secondary;
     }
 }
 
@@ -18,5 +35,31 @@
 
     &-text{
         margin-left: .4rem;
+    }
+}
+
+.container__result{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: $color-text;
+
+    &-header{
+        font-size: 20px;
+        line-height: 24px;
+        margin-left: 90px;
+    }
+
+    &-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        &-value{
+           border: 1px solid black;
+           background: red;
+           width: 350px;
+        }
     }
 }
