@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"> 
     <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBH_itL-3CLc0bpo1URAiGCz6q3FKu1fLA&callback=initMap&libraries=places&v=weekly"
+      defer
+    ></script>
 </head>
 <body>
    
@@ -25,29 +30,34 @@
                         <label for="Location" class="form__box-location">Where is your starting location?</label>
                         <div class="form-group">
                             <div class="field-icon"><i class="fa fa-map-marker-alt"></i></div>
-                            <input type="text" placeholder="Enter Location" class="form__box-input">
+                            <input type="text" placeholder="Enter Location" class="form__box-input" id="from">
                         </div>
                     </div>
                     <div class="form__box-container">
                         <label for="Location" class="form__box-location">Where is your destination?</label>
                         <div class="form-group">
                             <div class="field-icon"><i class="fa fa-map-marker-alt"></i></div>
-                            <input type="text" placeholder="Enter Location" class="form__box-input">
+                            <input type="text" placeholder="Enter Location" class="form__box-input" id="to">
                         </div>
                     </div>
                 </div>
 
-             <button class="btn btn-primary">View your route</button> 
+             <button class="btn btn-primary" id="show_result">View your route</button> 
         </div>
 
-        <div class="container__result">
+        <div class="container__result" id="floating-panel">
             <p class="container__result-header">Your route</p>  
             <div class="container__result-box">
                 <p class="container__result-box-value"><input type="radio" class="radio-box">Pass Sabon Tasha</p>
                 <p class="container__result-box-value"><input type="radio" class="radio-box">Pass Sabon Tasha</p>
                 <p class="container__result-box-value"><input type="radio" class="radio-box">Pass Sabon Tasha</p>
             </div>
+
+            <div id="right-panel"></div>
+            <div id="map"></div>
         </div>
    </div> 
+
+   <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
