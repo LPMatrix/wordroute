@@ -9,19 +9,50 @@
 .container{
     font-family: 'Poppins', sans-serif;
     display: flex;
-    
-    
+    // justify-content: space-evenly;
     height: 100vh;
+    
+
+
+    @include respond(phone){
+            display: flex;
+            flex-direction: column;
+    }
+
+
+    @include respond(tab-port){
+            display: flex;
+            flex-direction: column;
+    }
 
     &__input{
         width: 60%;
-        position: relative;
-        padding: 6rem;
+        padding: 5rem 7rem;
+
+
+        @include respond(phone){
+            width: 100%;
+            padding: 3rem 3.5rem;
+        }
+
     }
 
     &__result{
         width: 40%;
-        background: $color-secondary;
+        background: $color-secondary;   
+
+        @include respond(phone){
+            width: 100%;
+            height: 100%;
+            padding: 3rem 3.5rem;
+        }
+
+
+        @include respond(tab-port){
+            width: 100%;
+            height: 100%;
+            
+        }
     }
 }
 
@@ -36,23 +67,27 @@
 }
 
 .container__result{
-    // display: flex;
-    // justify-content: center;
+    padding: 11rem 5rem;
     
-    flex-direction: column;
     color: $color-text;
 
+    @include respond(phone){
+        padding: 5rem 2rem;
+    }
+
     &-header{
+       
         font-size: 20px;
         line-height: 24px;
-        margin: 150px 0 30px 90px;
+        color: $color-text;
+        margin-bottom: 1.5rem;
     }
 
     &-box{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+       
 
         &-value{
             display: flex;
@@ -61,13 +96,17 @@
            background: $color-tertiary;
            width: 350px;
            height: 40px;
-           padding-left: 10px;
-           margin: 5px;
+           padding-left: 20px;
+           margin: 15px 0 0 0;
+
+           @include respond(phone){
+                width: 300px;
+            }
         }
     }
 }
 
 .radio-box{
     margin-right: 5px;
-    background: $color-tertiary;
+   
 }
