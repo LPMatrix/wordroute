@@ -11,3 +11,29 @@
   align-items: center; }
   .logo__box-text {
     margin-left: .4rem; }
+
+input {
+  font-size: 0.875em;
+  padding: 0px 15px 0px 15px;
+  background: #ffffff;
+  outline: none;
+  color: #726659; }
+
+/*.field-icon { 
+    content: "\f007";
+    font-family: 'Font Awesome 5 Free'; 
+}*/
+form {
+  position: relative;
+  width: 500px;
+  margin: 50px auto 100px auto; }
+
+input {
+  font-size: 0.875em;
+  padding: 0px 15px 0px 15px;
+  background: #ffffff;
+  outline: none;
+  color: #726659; }
+
+.field-icon {
+  font-family: FontAwesome, sans-serif; }
