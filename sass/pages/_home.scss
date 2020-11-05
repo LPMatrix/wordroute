@@ -66,6 +66,35 @@
     }
 }
 
+input {
+    font-size: 0.875em;
+    padding: 0px 15px 0px 15px;
+    background: #ffffff;
+    outline: none;
+    color: #726659;
+}
+
+
+form {
+    position: relative;
+    width: 500px;
+    margin: 50px auto 100px auto;
+}
+
+.form-group{
+    display: flex;
+}
+.field-icon {
+    font-size: 0.875em;
+    padding: 16px 15px 0px 15px;
+    background: #ffffff;
+    outline: none;
+    color: #726659;
+    width: 40px;
+    height: 50px;
+    box-shadow: 0px 4px 80px rgba(0, 0, 0, 0.1);
+}
+
 .container__result{
     padding: 11rem 5rem;
     
