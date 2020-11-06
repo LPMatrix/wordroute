@@ -5,7 +5,17 @@ function initMap() {
     zoom: 13,
   });
 
-  new AutocompleteDirectionsHandler(map);
+  const auto = new AutocompleteDirectionsHandler(map);
+
+  auto.directionsRenderer.setMap(map);
+  auto.directionsRenderer.setPanel(document.getElementById("right-panel"));
+
+
+  const onChangeHandler = function () {
+    calculateAndDisplayRoute(auto.directionsService, auto.directionsRenderer);
+  };
+  document.getElementById("show_result").addEventListener("click", onChangeHandler);
+
 }
 
 class AutocompleteDirectionsHandler {
@@ -13,7 +23,7 @@ class AutocompleteDirectionsHandler {
     this.map = map;
     this.originPlaceId = "";
     this.destinationPlaceId = "";
-    this.travelMode = google.maps.TravelMode.WALKING;
+    this.travelMode = google.maps.TravelMode.DRIVING;
     this.directionsService = new google.maps.DirectionsService();
     this.directionsRenderer = new google.maps.DirectionsRenderer();
     this.directionsRenderer.setMap(map);
@@ -37,6 +47,7 @@ class AutocompleteDirectionsHandler {
     );
     this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(modeSelector);
   }
+
   setupPlaceChangedListener(autocomplete, mode) {
     autocomplete.bindTo("bounds", this.map);
     autocomplete.addListener("place_changed", () => {
@@ -55,6 +66,7 @@ class AutocompleteDirectionsHandler {
       this.route();
     });
   }
+
   route() {
     if (!this.originPlaceId || !this.destinationPlaceId) {
       return;
